@@ -1,15 +1,69 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+import {
+  WagmiConfig,
+  createClient,
+  defaultChains,
+  configureChains,
+} from "wagmi";
+
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+
+import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
+import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
+
+const alchemyId = "7GIY88RzFSwQqR4QMgjEPrHHSjGQSzeQ";
+
+// Configure chains & providers with the Alchemy provider.
+// Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
+const { chains, provider, webSocketProvider } = configureChains(defaultChains, [
+  alchemyProvider({ alchemyId }),
+  publicProvider(),
+]);
+
+// Set up client
+const client = createClient({
+  autoConnect: true,
+  connectors: [
+    // new MetaMaskConnector({ chains }),
+    new CoinbaseWalletConnector({
+      chains,
+      options: {
+        appName: "wagmi",
+      },
+    }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+      },
+    }),
+    // new InjectedConnector({
+    //   chains,
+    //   options: {
+    //     name: "Injected",
+    //     shimDisconnect: true,
+    //   },
+    // }),
+  ],
+  provider,
+  webSocketProvider,
+});
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <WagmiConfig client={client}>
+      <App />
+    </WagmiConfig>
   </React.StrictMode>
 );
 
