@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/wagmi-connect/static/css/main.073c9b0a.css",
+    "main.js": "/wagmi-connect/static/js/main.88c16a15.js",
+    "static/js/27.7a46c534.chunk.js": "/wagmi-connect/static/js/27.7a46c534.chunk.js",
+    "static/js/563.fa0bdd68.chunk.js": "/wagmi-connect/static/js/563.fa0bdd68.chunk.js",
+    "static/js/787.cf0c9ef5.chunk.js": "/wagmi-connect/static/js/787.cf0c9ef5.chunk.js",
+    "static/js/312.afb4ff32.chunk.js": "/wagmi-connect/static/js/312.afb4ff32.chunk.js",
+    "static/js/419.f2dcc653.chunk.js": "/wagmi-connect/static/js/419.f2dcc653.chunk.js",
+    "static/js/163.283fb83b.chunk.js": "/wagmi-connect/static/js/163.283fb83b.chunk.js",
+    "index.html": "/wagmi-connect/index.html",
+    "main.073c9b0a.css.map": "/wagmi-connect/static/css/main.073c9b0a.css.map",
+    "main.88c16a15.js.map": "/wagmi-connect/static/js/main.88c16a15.js.map",
+    "787.cf0c9ef5.chunk.js.map": "/wagmi-connect/static/js/787.cf0c9ef5.chunk.js.map",
+    "312.afb4ff32.chunk.js.map": "/wagmi-connect/static/js/312.afb4ff32.chunk.js.map",
+    "419.f2dcc653.chunk.js.map": "/wagmi-connect/static/js/419.f2dcc653.chunk.js.map",
+    "163.283fb83b.chunk.js.map": "/wagmi-connect/static/js/163.283fb83b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.88c16a15.js"
+  ]
+}
